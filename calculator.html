@@ -1,0 +1,1044 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>
+		Diet Calculator Calendar
+	</title>
+</head>
+<body>
+<!-- create style sheet for the months and use the class id on a function to switch through the months -->
+<style type="text/css">
+	table.hide {
+		display: none;
+	}
+	table.show {
+		display: inline;
+	}
+</style>
+<!-- create a title for the site -->
+	<H3 align="center" >Fitness Calendar</H3>
+<!-- creat buttons for each month with a function to show each month
+ -->	<td align="center">
+ 		<input type="button" value="January" onclick="pickMonth(arrayMonth[0])"></input>	
+ 		<input type="button" value="February" onclick="pickMonth(arrayMonth[1])"></input>
+ 		<input type="button" value="March" onclick="pickMonth(arrayMonth[2])"></input>
+ 		<input type="button" value="April" onclick="pickMonth(arrayMonth[3])"></input>
+ 		<input type="button" value="May" onclick="pickMonth(arrayMonth[4])"></input>
+ 		<input type="button" value="June" onclick="pickMonth(arrayMonth[5])"></input>
+ 		<input type="button" value="July" onclick="pickMonth(arrayMonth[6])"></input>
+ 		<input type="button" value="August" onclick="pickMonth(arrayMonth[7])"></input>
+ 		<input type="button" value="September" onclick="pickMonth(arrayMonth[8])"></input>
+ 		<input type="button" value="October" onclick="pickMonth(arrayMonth[9])"></input>
+ 		<input type="button" value="November" onclick="pickMonth(arrayMonth[10])"></input>
+ 		<input type="button" value="December" onclick="pickMonth(arrayMonth[11])"></input>
+ 		</td>
+		<!-- create table elements for each month -->
+	<table id="January" width="1300" border="2" align="center" class="show">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">January 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="February" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+			 
+				<td colspan="100" align="center">February 2016</td>
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="March" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+			
+				<td colspan="100" align="center">March 2016</td>
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="April" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+			
+				<td colspan="100" align="center">April 2016</td>
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="May" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">May 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="June" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">June 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="July" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">July 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="August" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">August 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="September" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">September 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="October" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">October 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="November" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">November 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<table id="December" width="1300" border="2" align="center" class="hide">
+		<thead>
+			<tr><!-- creating a basic calendar to add each caloric intake for the day of the month -->
+				</th>
+				<td colspan="100" align="center">December 2016</td>
+				
+				<!-- <td input type="button" value="next">Next</td> -->
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>				
+			</tr>
+		</thead>
+		<tbody>		
+		<tr><!-- for each day two buttons are created. one to add the caloric intake to the day and another to start over if necessary. Text input is added for a spot for the caloric intake to go. -->
+			<td>1<input type="button" value="Add Calories" onclick="addCalToDate('dayOne')"><input id="dayOne" type="text"/><input type="button" onclick="eraseDayCounter('dayOne')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>2<input type="button" value="Add Calories" onclick="addCalToDate('dayTwo')"><input id="dayTwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>3<input type="button" value="Add Calories" onclick="addCalToDate('dayThree')"><input id="dayThree" type="text"/><input type="button" onclick="eraseDayCounter('dayThree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>4<input type="button" value="Add Calories" onclick="addCalToDate('dayFour')"><input id="dayFour" type="text"/><input type="button" onclick="eraseDayCounter('dayFour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>5<input type="button" value="Add Calories" onclick="addCalToDate('dayFive')"><input id="dayFive" type="text"/><input type="button" onclick="eraseDayCounter('dayFive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>6<input type="button" value="Add Calories" onclick="addCalToDate('daySix')"><input id="daySix" type="text"/><input type="button" onclick="eraseDayCounter('daySix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>7<input type="button"  value="Add Calories"onclick="addCalToDate('daySeven')"><input id="daySeven" type="text"/><input type="button" onclick="eraseDayCounter('daySeven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>8<input type="button" value="Add Calories" onclick="addCalToDate('dayEight')"><input id="dayEight" type="text"/><input type="button" onclick="eraseDayCounter('dayEight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>9<input type="button" value="Add Calories" onclick="addCalToDate('dayNine')"><input id="dayNine" type="text"/><input type="button" onclick="eraseDayCounter('dayNine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>10<input type="button" value="Add Calories" onclick="addCalToDate('dayTen')"><input id="dayTen" type="text"/><input type="button" onclick="eraseDayCounter('dayTen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>11<input type="button" value="Add Calories" onclick="addCalToDate('dayEleven')"><input id="dayEleven" type="text"/><input type="button" onclick="eraseDayCounter('dayEleven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>12<input type="button" value="Add Calories" onclick="addCalToDate('dayTwelve')"><input id="dayTwelve" type="text"/><input type="button" onclick="eraseDayCounter('dayTwelve')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>13<input type="button" value="Add Calories" onclick="addCalToDate('dayThirteen')"><input id="dayThirteen" type="text"/><input type="button" onclick="eraseDayCounter('dayThirteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>14<input type="button" value="Add Calories" onclick="addCalToDate('dayFourteen')"><input id="dayFourteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFourteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>15<input type="button" value="Add Calories" onclick="addCalToDate('dayFifteen')"><input id="dayFifteen" type="text"/><input type="button" onclick="eraseDayCounter('dayFifteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>16<input type="button" value="Add Calories" onclick="addCalToDate('daySixteen')"><input id="daySixteen" type="text"/><input type="button" onclick="eraseDayCounter('daySixteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>17<input type="button" value="Add Calories" onclick="addCalToDate('daySeventeen')"><input id="daySeventeen" type="text"/><input type="button" onclick="eraseDayCounter('daySeventeen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>18<input type="button" value="Add Calories" onclick="addCalToDate('dayEighteen')"><input id="dayEighteen" type="text"/><input type="button" onclick="eraseDayCounter('dayEighteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>19<input type="button" value="Add Calories" onclick="addCalToDate('dayNineteen')"><input id="dayNineteen" type="text"/><input type="button" onclick="eraseDayCounter('dayNineteen')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>20<input type="button" value="Add Calories" onclick="addCalToDate('dayTwenty')"><input id="dayTwenty" type="text"/><input type="button" onclick="eraseDayCounter('dayTwenty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>21<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyone')"><input id="dayTwentyone" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>22<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentytwo')"><input id="dayTwentytwo" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentytwo')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>23<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentythree')"><input id="dayTwentythree" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentythree')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>24<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfour')"><input id="dayTwentyfour" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfour')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>25<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyfive')"><input id="dayTwentyfive" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyfive')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>26<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentysix')"><input id="dayTwentysix" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentysix')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>27<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyseven')"><input id="dayTwentyseven" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyseven')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>28<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentyeight')"><input id="dayTwentyeight" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentyeight')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+		</tr>
+		<tr>
+			<td>29<input type="button" value="Add Calories" onclick="addCalToDate('dayTwentynine')"><input id="dayTwentynine" type="text"/><input type="button" onclick="eraseDayCounter('dayTwentynine')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>30<input type="button" value="Add Calories" onclick="addCalToDate('dayThirty')"><input id="dayThirty" type="text"/><input type="button" onclick="eraseDayCounter('dayThirty')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td>31<input type="button" value="Add Calories" onclick="addCalToDate('dayThirtyone')"><input id="dayThirtyone" type="text"/><input type="button" onclick="eraseDayCounter('dayThirtyone')" value="Start Day Over" style="height: 30px; width: 100px; font-style: bold;"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- create a basic calculator for user in case calorie numbers are too confusing -->
+	<h4 align="center">Calculator</h4>
+	<div align="center">
+		<input id="a" type="text"/>
+		<input id="b" type="text"/>
+		<input type="button" onclick="sum()" value="add"/>
+		<input type="button" onclick="subtract()" value="subtract"/>
+		<input type="button" onclick="multi()" value="multiply"/>
+		<input type="button" onclick="div()" value="divide"/>
+	</div>
+	<!-- create a div for a persons weight, height, and gender numbers to see what caloric intake should be -->
+	<div align="center">
+	<h4>Enter Your Height and Weight</h4>
+		Enter Weight<input id="weight" type="text"/>
+		Enter Height<input id="height" type="text"/>
+		<!-- <select> create an option menu for genders-->
+  			<option value="male">Male</option>
+  			<option value="female">Female</option>
+		<!-- </select> create a basic button connected to calMeasure function -->
+		<input type="button" onclick="calMeasure()" value="Your Daily Calorie Intake"/>
+	</div>
+	<div><!-- input spot for the caloric intake to go -->
+		<h2>Caloric Intake For The Day<input id="caloricIntake" type="text" margin="40"  /></h2>
+	</div>
+
+	<div>
+	<h4 align="center">Select Your Food and Excercise for the Day</h4>
+	<!-- four menu slots. three for each meal of the day with a food from the API. one for an exercise menu to keep track of calories burned off for the day (not from the API) -->
+			<h4>Breakfast Menu:
+  				
+    				<input type="button" onclick="apiRequest(breakfast.granola)" value="Granola"/>
+    				<input type="button" onclick="apiRequest(breakfast.yogurt)" value="Yogurt"/>
+    				<input type="button" onclick="apiRequest(breakfast.biscuits)" value="Biscuits"/>
+    				<input type="button" onclick="apiRequest(breakfast.gravy)" value="Gravy"/>
+    				<input type="button" onclick="apiRequest(breakfast.oatmeal)" value="Oatmeal"/>
+    				<input type="button" onclick="apiRequest(breakfast.avocado)" value="Avocado"/>
+    				<input type="button" onclick="apiRequest(breakfast.eggs)" value="eggs"/>
+    				<input type="button" onclick="apiRequest(breakfast.pancakes)" value="Pancakes"/>
+    				<input type="button" onclick="apiRequest(breakfast.doughnut)" value="Doughnut"/>
+    				<input type="button" onclick="apiRequest(breakfast.bacon)" value="Bacon Strip"/>
+    				<input type="button" onclick="apiRequest(breakfast.smoothie)" value="Smoothie"/>
+    				<input type="button" onclick="apiRequest(breakfast.cereal)" value="Cheerios"/>
+    				<input type="button" onclick="apiRequest(breakfast.toast)" value="Toast"/>
+    				<input type="button" onclick="apiRequest(breakfast.milk)" value="Milk"/>
+    				<input type="button" onclick="apiRequest(breakfast.smoothie)" value="Smoothie"/>
+    				<input type="button" onclick="apiRequest(breakfast.orangeJuice)" value="Orange Juice"/>
+    				<input type="button" onclick="apiRequest(breakfast.appleJuice)" value="Apple Juice"/>
+    				<input type="button" onclick="apiRequest(breakfast.coffee)" value="Coffee"/>
+
+
+  				<br>
+  				
+  			</h4>
+  			<h4>Lunch Menu:
+  				
+    				<input type="button" onclick="apiRequest(lunch.salad)" value="Salad"/>
+    				<input type="button" onclick="apiRequest(lunch.spinachSalad)" value="Spinach Salad"/>
+    				<input type="button" onclick="apiRequest(lunch.turkeySand)" value="Turkey Sandwich"/>
+    				<input type="button" onclick="apiRequest(lunch.burrito)" value="Burrito"/>
+    				<input type="button" onclick="apiRequest(lunch.hamburger)" value="Hamburger"/>
+    				<input type="button" onclick="apiRequest(lunch.pizza)" value="Pizza"/>
+
+  				<br>
+  				
+  			</h4>
+  			<!-- <h4>Exercise Menu: menu connected to simple calSubtract function and not API-->
+  				
+    				<input type="button" onclick="calSubtract(exercise.jogging)" value="Jogging"/>
+    				<input type="button" onclick="calSubtract(exercise.biking)" value="Biking"/>
+    				<input type="button" onclick="calSubtract(exercise.swimming)" value="Swimming"/>
+    				<input type="button" onclick="calSubtract(exercise.weights)" value="Weights"/>
+    				<input type="button" onclick="calSubtract(exercise.sports)" value="sports"/>
+    				<input type="button" onclick="calSubtract(exercise.walking)" value="Walking">
+    				<input type="button" onclick="calSubtract(exercise.hiking)" value="Hiking">
+
+  				
+  				<br>
+  			<h4>Dinner Menu:
+  				
+    				<input type="button" onclick="apiRequest(dinner.pasta)" value="Pasta"/>
+    				<input type="button" onclick="apiRequest(dinner.chicken)" value="Chicken"/>
+    				<input type="button" onclick="apiRequest(dinner.broccoli)" value="Broccoli"/>
+    				<input type="button" onclick="apiRequest(dinner.meatloaf)" value="Meatloaf"/>
+    				<input type="button" onclick="apiRequest(dinner.pizza)" value="Pizza"/>
+    				<input type="button" onclick="apiRequest(dinner.takeout)" value="Takeout"/>
+
+  				
+  				<!-- <br> create a simple button to erase any number from the calcalculator-->
+  				<input type="button" onclick="eraseCounter()" value="Start Calorie Intake Over" style="height: 30px; width: 200px; font-style: bold;">
+  			
+	</div>
+ </body>
+</html>
+<!-- create a script with Javascript -->
+<script type="text/javascript">
+//create a function to use in switching through the months to hide and show one at a time
+			var arrayMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			function pickMonth (month) {
+				document.getElementById("January").className = "hide";
+				document.getElementById("February").className = "hide";
+				document.getElementById("March").className = "hide";
+				document.getElementById("April").className = "hide";
+				document.getElementById("May").className = "hide";
+				document.getElementById("June").className = "hide";
+				document.getElementById("July").className = "hide";
+				document.getElementById("August").className = "hide";
+				document.getElementById("September").className = "hide";
+				document.getElementById("October").className = "hide";
+				document.getElementById("November").className = "hide";
+				document.getElementById("December").className = "hide";
+				document.getElementById(month).className = "show";
+			}
+			//create function for each menu item to add or subtract to daily caloric intake. 
+			//food objects (add to caloric intake)
+			var breakfast = {granola: '08037', yogurt: '01275', biscuits: '21009', oatmeal: '08640', eggs: '01128', pancakes: '18499', doughnut: '18251', bacon: '10860'};
+			
+			var lunch = {salad: '21378', spinachSalad: '21379', turkeySand: '21155', burrito: '22918', hamburger: '21393', pizza: '21274'};
+			
+			var dinner = {pasta: '22901', chicken: '05009', broccoli: '11742', meatloaf: '43137', pizza: '21274', takeout: '36621'};
+			//exercise objects (subtract caloric intake. Not taken from API source). connect to a simple function that subtracts the food calorie number.
+			var exercise = {jogging: 500, biking: 500, swimming: 600, weights: 400, sports: 600, walking: 100, hiking: 150};
+			
+//simple math functions to create a calculator
+//two numbers whose values are passed into math functions below
+			//calculator functions	
+			var a,b,result;
+			function setValues() {
+				a = Number(document.getElementById("a").value);
+				b = Number(document.getElementById("b").value);
+			}
+			//simple adding function
+			function sum() {
+				setValues();
+				result = a + b;
+				alert(result);
+			}
+			//simple subtracting function
+			function subtract() {
+				setValues();
+				result=a-b;
+				alert(result);
+			}
+			//simple multiplication function
+			function multi() {
+				setValues();
+				result = a*b;
+				alert(result);
+			}
+			//simple dividing function
+			function div() {
+				setValues();
+				result = a/b;
+				alert(result);
+			}//create a function that calculates the users weight, height, and gender to give a daily caloric intake measure
+			function calMeasure() {
+				var w = parseInt(document.getElementById("weight").value);
+				var h = parseInt(document.getElementById("height").value);
+				if (w >= 200 && h >= 5.7) {
+					alert("Your daily calorie intake should be 1,000 Kcal");
+				}
+				else if (w < 200 && h < 5.7) {
+					alert("Your daily calorie intake should be 2,000 Kcal");
+				}
+				else {alert("Enter Your Weight and Height")
+				};
+			}	
+			//create a function that takes the calorie value from apiRequest and adds it to caloricIntake.
+//create function for each menu item to add to caloric intake. 
+			function calCounter(num) {
+			 	var c = parseInt(document.getElementById("caloricIntake").value) || 0;
+			 	c += num;
+			 	document.getElementById("caloricIntake").value = c;
+			 }
+//create of function that takes in an excercise object and subtracts to the caloric intake.
+			 function calSubtract(exNum) {
+			 	var c = parseInt(document.getElementById("caloricIntake").value) || 0;
+			 	c -= exNum;
+			 	document.getElementById("caloricIntake").value = c;
+				 }
+//create a function that adds the caloric intake value to a date when clicked.
+			function addCalToDate(cal) {
+				var d = parseInt(document.getElementById(cal).value) || 0;
+				var c = parseInt(document.getElementById("caloricIntake").value) || 0;
+				d += c;
+				document.getElementById(cal).value = d;
+			}
+//create a function that deletes the current caloric value when clicked.
+			function eraseCounter() {
+				document.getElementById("caloricIntake").value = 0;
+			}
+//create a function that deletes the current caloric value on the date when clicked.
+			function eraseDayCounter(day) {
+				document.getElementById(day).value = 0;
+			}
+			//create an API function connecting the usda.gov api to retrieve kcal number from eah food object picked.
+			//create a loop that breaks after 200
+var response = null;
+var xhr = new XMLHttpRequest();
+function apiRequest(foodNum) { 
+		xhr.open('GET', encodeURI('http://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=1XwdGiptyEDWlvBIk2XzhBtjDdQ3kfzwRcMLTDVe&nutrients=205&nutrients=204&nutrients=208&nutrients=269&ndbno=' + foodNum)); 
+		xhr.onload = function() { 
+			if (xhr.status === 200) { 
+				 response = JSON.parse(xhr.responseText); 
+				 var calValue = response.report.foods;
+                 calValue.filter(function(element) {
+                    if (element.ndbno === foodNum) {
+                      nutrVal = element.nutrients;
+                    }              
+                 });
+                 nutrVal.filter(function(element) {
+                    if (element.nutrient === "Energy") {
+                        energyVal = element.value;
+                        energyVal = parseInt(element.value);
+                    }    
+                 }); return calCounter(energyVal);			} 
+			else { 
+				alert('Request failed. Returned status of ' + xhr.status); 
+			} 
+		};
+  	xhr.send();
+};
+
+
+
+		</script>
+	
+	
+		
+		
